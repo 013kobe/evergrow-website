@@ -1,0 +1,1683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Evergrow Landscaping & Roofing | Markham, Ontario</title>
+<meta name="description" content="Professional landscaping, roofing, interlock, drainage, and snow removal services in Markham and the GTA. Honest pricing, exceptional communication, owner-supervised projects.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #2d5a27;
+    --green-light: #3d7a35;
+    --green-pale: #e8f2e6;
+    --green-mid: #4e9445;
+    --charcoal: #1a1e17;
+    --dark: #111411;
+    --grey: #5a5f57;
+    --grey-light: #9ea09b;
+    --off-white: #f8f6f2;
+    --white: #ffffff;
+    --gold: #c8a84b;
+    --section-gap: 100px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--charcoal);
+    background: var(--white);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 5%;
+    height: 72px;
+    background: rgba(17,20,17,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    transition: all 0.3s ease;
+  }
+
+  .nav-logo {
+    display: flex; align-items: center; gap: 10px;
+    text-decoration: none;
+  }
+
+  .logo-mark {
+    width: 38px; height: 38px;
+    background: var(--green-mid);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+  }
+
+  .logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.15;
+  }
+
+  .logo-text span {
+    display: block;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 400;
+    color: var(--green-mid);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .nav-links {
+    display: flex; align-items: center; gap: 32px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--white); }
+
+  .nav-cta {
+    background: var(--green-mid) !important;
+    color: var(--white) !important;
+    padding: 9px 20px;
+    border-radius: 6px;
+    font-weight: 600 !important;
+    transition: background 0.2s !important;
+  }
+
+  .nav-cta:hover { background: var(--green-light) !important; }
+
+  .hamburger {
+    display: none;
+    flex-direction: column; gap: 5px;
+    cursor: pointer; padding: 5px;
+  }
+
+  .hamburger span {
+    display: block; width: 24px; height: 2px;
+    background: var(--white); border-radius: 2px;
+    transition: all 0.3s;
+  }
+
+  /* ─── HERO ─── */
+  #hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex; align-items: center;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(135deg, rgba(17,20,17,0.88) 0%, rgba(45,90,39,0.7) 60%, rgba(17,20,17,0.6) 100%),
+      url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80') center/cover no-repeat;
+  }
+
+  .hero-texture {
+    position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .hero-content {
+    position: relative; z-index: 2;
+    width: 90%; max-width: 780px;
+    margin: 0 auto;
+    padding: 120px 0 80px;
+    animation: heroFadeUp 1s ease both;
+  }
+
+  @keyframes heroFadeUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(78,148,69,0.25);
+    border: 1px solid rgba(78,148,69,0.4);
+    color: #8fd484;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 100px;
+    margin-bottom: 28px;
+  }
+
+  .hero-badge::before { content: '●'; font-size: 0.5rem; }
+
+  h1.hero-title {
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1.08;
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+  }
+
+  h1.hero-title em {
+    font-style: normal;
+    color: var(--green-mid);
+  }
+
+  .hero-sub {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.72);
+    line-height: 1.7;
+    max-width: 560px;
+    margin-bottom: 40px;
+    font-weight: 300;
+  }
+
+  .trust-signals {
+    display: flex; flex-wrap: wrap; gap: 12px;
+    margin-bottom: 44px;
+  }
+
+  .trust-pill {
+    display: flex; align-items: center; gap: 7px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    color: rgba(255,255,255,0.85);
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 7px 14px;
+    border-radius: 100px;
+  }
+
+  .trust-pill::before {
+    content: '✓';
+    color: var(--green-mid);
+    font-weight: 700;
+  }
+
+  .hero-buttons {
+    display: flex; gap: 14px; flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--green-mid);
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 15px 30px;
+    border-radius: 8px;
+    border: none; cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 24px rgba(78,148,69,0.35);
+  }
+
+  .btn-primary:hover {
+    background: var(--green-light);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(78,148,69,0.45);
+  }
+
+  .btn-outline {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: transparent;
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 15px 30px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.3);
+    cursor: pointer;
+    transition: all 0.25s ease;
+  }
+
+  .btn-outline:hover {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.5);
+  }
+
+  .hero-scroll {
+    position: absolute; bottom: 36px; left: 50%;
+    transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    color: rgba(255,255,255,0.4);
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    animation: bounce 2s ease-in-out infinite;
+  }
+
+  .hero-scroll::after {
+    content: '';
+    width: 1px; height: 40px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.3), transparent);
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(6px); }
+  }
+
+  /* ─── SECTION BASE ─── */
+  section { padding: var(--section-gap) 5%; }
+
+  .section-label {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--green-mid);
+    margin-bottom: 16px;
+  }
+
+  .section-label::before {
+    content: '';
+    display: block; width: 28px; height: 2px;
+    background: var(--green-mid);
+  }
+
+  .section-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    line-height: 1.18;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+  }
+
+  .section-subtitle {
+    font-size: 1.05rem;
+    color: var(--grey);
+    line-height: 1.7;
+    font-weight: 300;
+    max-width: 560px;
+  }
+
+  .section-header {
+    margin-bottom: 64px;
+  }
+
+  .section-header.center {
+    text-align: center;
+  }
+
+  .section-header.center .section-label {
+    justify-content: center;
+  }
+
+  .section-header.center .section-subtitle {
+    margin: 0 auto;
+  }
+
+  /* ─── WHY CHOOSE ─── */
+  #why {
+    background: var(--charcoal);
+    position: relative;
+    overflow: hidden;
+  }
+
+  #why::before {
+    content: '';
+    position: absolute; top: -100px; right: -100px;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(78,148,69,0.12) 0%, transparent 70%);
+  }
+
+  #why .section-title { color: var(--white); }
+  #why .section-label { color: #8fd484; }
+  #why .section-label::before { background: #8fd484; }
+  #why .section-subtitle { color: rgba(255,255,255,0.55); }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .why-card {
+    background: rgba(255,255,255,0.03);
+    padding: 40px 36px;
+    position: relative;
+    transition: background 0.3s;
+  }
+
+  .why-card:hover {
+    background: rgba(78,148,69,0.08);
+  }
+
+  .why-icon {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .why-card h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 10px;
+  }
+
+  .why-card p {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.7;
+  }
+
+  .why-card::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--green-mid);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: left;
+  }
+
+  .why-card:hover::after { transform: scaleX(1); }
+
+  /* ─── SERVICES ─── */
+  #services { background: var(--off-white); }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .service-card {
+    background: var(--white);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+  }
+
+  .service-img {
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-img img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  .service-card:hover .service-img img {
+    transform: scale(1.05);
+  }
+
+  .service-tag {
+    position: absolute; top: 14px; left: 14px;
+    background: var(--green-mid);
+    color: var(--white);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 4px;
+  }
+
+  .service-body {
+    padding: 24px;
+  }
+
+  .service-body h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--charcoal);
+    margin-bottom: 8px;
+  }
+
+  .service-body p {
+    font-size: 0.87rem;
+    color: var(--grey);
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  .service-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    color: var(--green-mid);
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: gap 0.2s;
+  }
+
+  .service-link:hover { gap: 10px; }
+
+  /* ─── BEFORE/AFTER ─── */
+  #gallery {
+    background: var(--charcoal);
+  }
+
+  #gallery .section-title { color: var(--white); }
+  #gallery .section-label { color: #8fd484; }
+  #gallery .section-label::before { background: #8fd484; }
+  #gallery .section-subtitle { color: rgba(255,255,255,0.55); }
+
+  .ba-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .ba-item {
+    border-radius: 14px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .ba-item.large {
+    grid-column: span 2;
+  }
+
+  .ba-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3px;
+    position: relative;
+  }
+
+  .ba-panel {
+    position: relative;
+    height: 280px;
+    overflow: hidden;
+  }
+
+  .ba-item.large .ba-panel {
+    height: 380px;
+  }
+
+  .ba-panel img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+  }
+
+  .ba-label {
+    position: absolute;
+    bottom: 12px; left: 12px;
+    background: rgba(0,0,0,0.65);
+    color: var(--white);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border-radius: 4px;
+    backdrop-filter: blur(4px);
+  }
+
+  .ba-label.after {
+    background: rgba(78,148,69,0.8);
+  }
+
+  .ba-divider {
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 50%;
+    width: 3px;
+    background: var(--white);
+    z-index: 2;
+    transform: translateX(-50%);
+  }
+
+  .ba-divider::before, .ba-divider::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 28px; height: 28px;
+    background: var(--white);
+    border-radius: 50%;
+  }
+
+  .ba-divider::before { top: calc(50% - 14px); }
+
+  .ba-caption {
+    padding: 18px 20px;
+    background: rgba(255,255,255,0.04);
+  }
+
+  .ba-caption h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 4px;
+  }
+
+  .ba-caption p {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.45);
+  }
+
+  /* ─── REVIEWS ─── */
+  #reviews { background: var(--off-white); }
+
+  .stars {
+    color: #f5a623;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+  }
+
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .review-card {
+    background: var(--white);
+    border-radius: 14px;
+    padding: 28px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  .review-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  }
+
+  .review-card:first-child {
+    grid-column: span 2;
+    background: var(--green);
+  }
+
+  .review-card:first-child .review-text { color: rgba(255,255,255,0.85); }
+  .review-card:first-child .reviewer-name { color: var(--white); }
+  .review-card:first-child .reviewer-detail { color: rgba(255,255,255,0.5); }
+  .review-card:first-child .stars { color: #ffd166; }
+
+  .review-quote {
+    font-size: 4rem;
+    line-height: 0.8;
+    color: var(--green-pale);
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 8px;
+  }
+
+  .review-card:first-child .review-quote {
+    color: rgba(255,255,255,0.15);
+  }
+
+  .review-text {
+    font-size: 0.92rem;
+    color: var(--grey);
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+
+  .reviewer {
+    display: flex; align-items: center; gap: 12px;
+  }
+
+  .reviewer-avatar {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: var(--green-pale);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--green);
+    flex-shrink: 0;
+  }
+
+  .review-card:first-child .reviewer-avatar {
+    background: rgba(255,255,255,0.15);
+    color: var(--white);
+  }
+
+  .reviewer-name {
+    font-weight: 600;
+    font-size: 0.88rem;
+    color: var(--charcoal);
+  }
+
+  .reviewer-detail {
+    font-size: 0.78rem;
+    color: var(--grey-light);
+  }
+
+  .google-badge {
+    position: absolute; top: 20px; right: 20px;
+    background: var(--white);
+    border-radius: 6px;
+    padding: 4px 8px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #4285F4;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+  }
+
+  /* ─── ABOUT ─── */
+  #about {
+    background: var(--white);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .about-img-wrap {
+    position: relative;
+  }
+
+  .about-img-main {
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+  }
+
+  .about-img-main img {
+    width: 100%; height: 460px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .about-accent {
+    position: absolute;
+    bottom: -24px; right: -24px;
+    width: 180px; height: 180px;
+    background: var(--green-pale);
+    border-radius: 16px;
+    z-index: -1;
+  }
+
+  .about-stat-card {
+    position: absolute;
+    top: 32px; right: -32px;
+    background: var(--green);
+    color: var(--white);
+    border-radius: 12px;
+    padding: 20px 24px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(45,90,39,0.4);
+  }
+
+  .about-stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .about-stat-label {
+    font-size: 0.72rem;
+    font-weight: 500;
+    opacity: 0.75;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-top: 4px;
+  }
+
+  .about-content p {
+    font-size: 1rem;
+    color: var(--grey);
+    line-height: 1.8;
+    margin-bottom: 32px;
+    font-weight: 300;
+  }
+
+  .about-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  .about-feature {
+    display: flex; align-items: flex-start; gap: 10px;
+    font-size: 0.88rem;
+    color: var(--charcoal);
+  }
+
+  .about-feature::before {
+    content: '✓';
+    color: var(--green-mid);
+    font-weight: 700;
+    font-size: 0.85rem;
+    margin-top: 1px;
+    flex-shrink: 0;
+  }
+
+  /* ─── SERVICE AREA ─── */
+  #area { background: var(--off-white); }
+
+  .area-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 64px;
+    align-items: start;
+  }
+
+  .area-cities {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 32px;
+  }
+
+  .city-chip {
+    display: flex; align-items: center; gap: 10px;
+    background: var(--white);
+    border: 1px solid rgba(0,0,0,0.07);
+    border-radius: 10px;
+    padding: 14px 16px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--charcoal);
+    transition: all 0.25s;
+  }
+
+  .city-chip:hover {
+    border-color: var(--green-mid);
+    color: var(--green);
+    background: var(--green-pale);
+  }
+
+  .city-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--green-mid);
+    flex-shrink: 0;
+  }
+
+  .map-placeholder {
+    background: var(--white);
+    border-radius: 16px;
+    overflow: hidden;
+    height: 420px;
+    position: relative;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  }
+
+  .map-placeholder iframe {
+    width: 100%; height: 100%;
+    border: none;
+  }
+
+  /* ─── CTA ─── */
+  #cta {
+    background: var(--green);
+    text-align: center;
+    padding: 120px 5%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  #cta::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  #cta .section-title { color: var(--white); font-size: clamp(2.2rem, 4vw, 3.4rem); }
+
+  .cta-sub {
+    color: rgba(255,255,255,0.72);
+    font-size: 1.1rem;
+    margin: 16px auto 48px;
+    max-width: 480px;
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  .cta-buttons {
+    display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;
+  }
+
+  .btn-white {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--white);
+    color: var(--green);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 15px 30px;
+    border-radius: 8px;
+    border: none; cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  }
+
+  .btn-white:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  }
+
+  .btn-outline-white {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: transparent;
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 15px 30px;
+    border-radius: 8px;
+    border: 2px solid rgba(255,255,255,0.4);
+    cursor: pointer;
+    transition: all 0.25s ease;
+  }
+
+  .btn-outline-white:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(255,255,255,0.7);
+  }
+
+  /* ─── CONTACT ─── */
+  #contact { background: var(--charcoal); }
+
+  #contact .section-title { color: var(--white); }
+  #contact .section-label { color: #8fd484; }
+  #contact .section-label::before { background: #8fd484; }
+
+  .contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 64px;
+  }
+
+  .contact-info-item {
+    display: flex; align-items: flex-start; gap: 16px;
+    margin-bottom: 28px;
+  }
+
+  .contact-icon {
+    width: 44px; height: 44px;
+    background: rgba(78,148,69,0.15);
+    border: 1px solid rgba(78,148,69,0.3);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+
+  .contact-info-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--green-mid);
+    margin-bottom: 4px;
+  }
+
+  .contact-info-value {
+    font-size: 1rem;
+    color: var(--white);
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  .contact-info-value:hover { color: var(--green-mid); }
+
+  .contact-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .form-group {
+    display: flex; flex-direction: column; gap: 6px;
+  }
+
+  .form-group.full { grid-column: span 2; }
+
+  .form-group label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.55);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 12px 16px;
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.92rem;
+    transition: border-color 0.2s;
+    outline: none;
+  }
+
+  .form-group select option { background: var(--charcoal); }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--green-mid);
+  }
+
+  .form-group textarea { resize: vertical; min-height: 120px; }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--dark);
+    padding: 48px 5% 32px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.8fr 1fr 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 48px;
+  }
+
+  .footer-brand p {
+    font-size: 0.86rem;
+    color: rgba(255,255,255,0.4);
+    line-height: 1.7;
+    margin-top: 16px;
+    max-width: 260px;
+  }
+
+  .footer-col h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.3);
+    margin-bottom: 18px;
+  }
+
+  .footer-col ul { list-style: none; }
+
+  .footer-col ul li {
+    margin-bottom: 10px;
+  }
+
+  .footer-col ul li a {
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: color 0.2s;
+  }
+
+  .footer-col ul li a:hover { color: var(--white); }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding-top: 24px;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 12px;
+  }
+
+  .footer-bottom p {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.28);
+  }
+
+  /* ─── MOBILE NAV ─── */
+  .mobile-menu {
+    display: none;
+    position: fixed; top: 72px; left: 0; right: 0;
+    background: var(--dark);
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 24px 5%;
+    z-index: 999;
+    flex-direction: column; gap: 0;
+  }
+
+  .mobile-menu.active { display: flex; }
+
+  .mobile-menu a {
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  /* ─── ANIMATIONS ─── */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 1024px) {
+    .why-grid { grid-template-columns: repeat(2, 1fr); }
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+    .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+    .review-card:first-child { grid-column: span 1; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .area-layout { grid-template-columns: 1fr; }
+    #about { grid-template-columns: 1fr; gap: 48px; }
+    .contact-layout { grid-template-columns: 1fr; gap: 48px; }
+  }
+
+  @media (max-width: 768px) {
+    :root { --section-gap: 64px; }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .why-grid { grid-template-columns: 1fr; }
+    .services-grid { grid-template-columns: 1fr; }
+    .reviews-grid { grid-template-columns: 1fr; }
+    .review-card:first-child { grid-column: span 1; }
+    .ba-grid { grid-template-columns: 1fr; }
+    .ba-item.large { grid-column: span 1; }
+    .about-stat-card { display: none; }
+    .contact-form { grid-template-columns: 1fr; }
+    .form-group.full { grid-column: span 1; }
+    .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+    .footer-bottom { flex-direction: column; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">
+    <div class="logo-mark">🌿</div>
+    <div class="logo-text">
+      Evergrow
+      <span>Landscaping & Roofing</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#services">Landscaping</a></li>
+    <li><a href="#services">Roofing</a></li>
+    <li><a href="#services">Snow Removal</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#contact" class="nav-cta">Free Estimate</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#services" onclick="toggleMenu()">Landscaping</a>
+  <a href="#services" onclick="toggleMenu()">Roofing</a>
+  <a href="#services" onclick="toggleMenu()">Snow Removal</a>
+  <a href="#about" onclick="toggleMenu()">About</a>
+  <a href="#reviews" onclick="toggleMenu()">Reviews</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-texture"></div>
+  <div class="hero-content">
+    <div class="hero-badge">Markham & GTA's Trusted Contractor</div>
+    <h1 class="hero-title">Landscaping & Roofing<br>Done <em>Right</em><br>The First Time</h1>
+    <p class="hero-sub">Serving Markham and the GTA with expert landscaping, roofing repairs, interlock installations, drainage solutions, and reliable snow removal services.</p>
+    <div class="trust-signals">
+      <div class="trust-pill">Fast Response Times</div>
+      <div class="trust-pill">Honest Pricing</div>
+      <div class="trust-pill">Exceptional Communication</div>
+      <div class="trust-pill">Fully Supervised Projects</div>
+      <div class="trust-pill">Hundreds of Happy Homeowners</div>
+    </div>
+    <div class="hero-buttons">
+      <a href="#contact" class="btn-primary">🌿 Get Free Estimate</a>
+      <a href="tel:+16471234567" class="btn-outline">📞 Call Now</a>
+    </div>
+  </div>
+  <div class="hero-scroll">Scroll</div>
+</section>
+
+<!-- WHY CHOOSE EVERGROW -->
+<section id="why">
+  <div class="section-header fade-up">
+    <div class="section-label">Why Evergrow</div>
+    <h2 class="section-title" style="color:var(--white)">Why Homeowners Choose Evergrow</h2>
+    <p class="section-subtitle">We've built our reputation on the things that matter most to homeowners.</p>
+  </div>
+  <div class="why-grid fade-up">
+    <div class="why-card">
+      <span class="why-icon">💬</span>
+      <h3>Exceptional Communication</h3>
+      <p>From your first quote to final walkthrough, you'll always know exactly what's happening with your project.</p>
+    </div>
+    <div class="why-card">
+      <span class="why-icon">⏱</span>
+      <h3>Projects Finished On Time</h3>
+      <p>Many projects are completed ahead of schedule without ever sacrificing quality or attention to detail.</p>
+    </div>
+    <div class="why-card">
+      <span class="why-icon">💰</span>
+      <h3>Honest & Transparent Pricing</h3>
+      <p>Clear quotes, fair pricing, and no surprises. What we quote is what you pay — every single time.</p>
+    </div>
+    <div class="why-card">
+      <span class="why-icon">🔨</span>
+      <h3>Professional Workmanship</h3>
+      <p>Every project is completed with precision, care, and meticulous attention to detail from start to finish.</p>
+    </div>
+    <div class="why-card">
+      <span class="why-icon">👷</span>
+      <h3>Owner Supervised Projects</h3>
+      <p>Godfrey personally oversees every project to ensure quality standards and complete customer satisfaction.</p>
+    </div>
+    <div class="why-card">
+      <span class="why-icon">⭐</span>
+      <h3>Reliable Service</h3>
+      <p>Customers consistently praise Evergrow for being dependable, responsive, and a pleasure to work with.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-header center fade-up">
+    <div class="section-label">Our Services</div>
+    <h2 class="section-title">Everything Your Property Needs</h2>
+    <p class="section-subtitle">From curb appeal upgrades to critical repairs — we do it all with precision and care.</p>
+  </div>
+  <div class="services-grid fade-up">
+    <div class="service-card">
+      <div class="service-img">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Interlock and patio installation">
+        <span class="service-tag">Landscaping</span>
+      </div>
+      <div class="service-body">
+        <h3>Interlock & Patios</h3>
+        <p>Beautiful patios, walkways, and outdoor living spaces crafted to enhance your property and lifestyle.</p>
+        <a href="#contact" class="service-link">Get a Quote →</a>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-img">
+        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6d8e0f3b?w=600&q=80" alt="Driveway installation">
+        <span class="service-tag">Landscaping</span>
+      </div>
+      <div class="service-body">
+        <h3>Driveways & Extensions</h3>
+        <p>Custom driveway installations and extensions that dramatically improve curb appeal and functionality.</p>
+        <a href="#contact" class="service-link">Get a Quote →</a>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-img">
+        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80" alt="Grading and drainage">
+        <span class="service-tag">Drainage</span>
+      </div>
+      <div class="service-body">
+        <h3>Grading & Drainage Solutions</h3>
+        <p>Protect your home from water damage with proper grading, weeping tile, and drainage system installations.</p>
+        <a href="#contact" class="service-link">Get a Quote →</a>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-img">
+        <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4aaae?w=600&q=80" alt="Retaining walls and landscaping">
+        <span class="service-tag">Landscaping</span>
+      </div>
+      <div class="service-body">
+        <h3>Retaining Walls & Landscaping</h3>
+        <p>Transform your property with professional landscaping solutions including garden beds, retaining walls, and more.</p>
+        <a href="#contact" class="service-link">Get a Quote →</a>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-img">
+        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80" alt="Roof repairs">
+        <span class="service-tag">Roofing</span>
+      </div>
+      <div class="service-body">
+        <h3>Roof Repairs</h3>
+        <p>Leak detection, professional repairs, and preventative roofing maintenance to protect your home year-round.</p>
+        <a href="#contact" class="service-link">Get a Quote →</a>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-img">
+        <img src="https://images.unsplash.com/photo-1547638375-ebf04735d792?w=600&q=80" alt="Snow removal service">
+        <span class="service-tag">Snow Removal</span>
+      </div>
+      <div class="service-body">
+        <h3>Snow Removal</h3>
+        <p>Reliable residential snow clearing for homeowners and seniors. Seasonal contracts available across the GTA.</p>
+        <a href="#contact" class="service-link">Get a Quote →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE & AFTER -->
+<section id="gallery">
+  <div class="section-header fade-up">
+    <div class="section-label">Project Gallery</div>
+    <h2 class="section-title" style="color:var(--white)">Transforming Homes Across Markham</h2>
+    <p class="section-subtitle">See the difference professional workmanship makes.</p>
+  </div>
+  <div class="ba-grid fade-up">
+    <div class="ba-item large">
+      <div class="ba-images">
+        <div class="ba-panel">
+          <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800&q=70&sat=-80" alt="Before - cracked driveway">
+          <span class="ba-label">Before</span>
+        </div>
+        <div class="ba-panel">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="After - interlock driveway">
+          <span class="ba-label after">After</span>
+        </div>
+        <div class="ba-divider"></div>
+      </div>
+      <div class="ba-caption">
+        <h4>Full Interlock Driveway & Walkway — Markham</h4>
+        <p>Complete driveway replacement with premium interlock and matching front walkway</p>
+      </div>
+    </div>
+    <div class="ba-item">
+      <div class="ba-images">
+        <div class="ba-panel">
+          <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=600&q=70&sat=-70" alt="Before - backyard">
+          <span class="ba-label">Before</span>
+        </div>
+        <div class="ba-panel">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80" alt="After - backyard patio">
+          <span class="ba-label after">After</span>
+        </div>
+        <div class="ba-divider"></div>
+      </div>
+      <div class="ba-caption">
+        <h4>Backyard Patio & Landscaping — Richmond Hill</h4>
+        <p>Natural stone patio with garden beds and sod installation</p>
+      </div>
+    </div>
+    <div class="ba-item">
+      <div class="ba-images">
+        <div class="ba-panel">
+          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=70&sat=-60" alt="Before - damaged roof">
+          <span class="ba-label">Before</span>
+        </div>
+        <div class="ba-panel">
+          <img src="https://images.unsplash.com/photo-1625602812206-5ec545ca1231?w=600&q=80" alt="After - repaired roof">
+          <span class="ba-label after">After</span>
+        </div>
+        <div class="ba-divider"></div>
+      </div>
+      <div class="ba-caption">
+        <h4>Roof Repair & Flashing — Vaughan</h4>
+        <p>Shingle replacement and full flashing repair to stop recurring leak</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <div class="section-header center fade-up">
+    <div class="section-label">Customer Reviews</div>
+    <h2 class="section-title">Trusted By Homeowners Across The GTA</h2>
+    <p class="section-subtitle">Don't take our word for it — here's what our customers say.</p>
+  </div>
+  <div class="reviews-grid fade-up">
+    <div class="review-card">
+      <div class="google-badge" style="background:var(--green-light);color:#fff;padding:4px 10px;">★ Google Review</div>
+      <div class="stars">★★★★★</div>
+      <div class="review-quote">"</div>
+      <p class="review-text">Fantastic communication from quote to completion. Every step was clearly explained, the crew showed up when they said they would, and the workmanship exceeded our expectations. Our new interlock driveway looks incredible.</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">MH</div>
+        <div>
+          <div class="reviewer-name">Michael H.</div>
+          <div class="reviewer-detail">Markham, ON · Interlock Driveway</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="google-badge">Google</div>
+      <div class="stars">★★★★★</div>
+      <div class="review-quote">"</div>
+      <p class="review-text">They completed the project ahead of schedule and the results completely transformed our property. So impressed with the quality and how smooth the whole process was.</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">SP</div>
+        <div>
+          <div class="reviewer-name">Sarah P.</div>
+          <div class="reviewer-detail">Richmond Hill, ON · Backyard Patio</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="google-badge">Google</div>
+      <div class="stars">★★★★★</div>
+      <div class="review-quote">"</div>
+      <p class="review-text">We signed up our parents for seasonal snow removal and the peace of mind has been invaluable. Reliable, on time, and the team is always courteous. Highly recommend for seniors.</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">JK</div>
+        <div>
+          <div class="reviewer-name">Jennifer K.</div>
+          <div class="reviewer-detail">Stouffville, ON · Snow Removal</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="google-badge">Google</div>
+      <div class="stars">★★★★★</div>
+      <div class="review-quote">"</div>
+      <p class="review-text">The roof leak was fixed quickly and professionally. Godfrey came out same day to assess, gave a fair quote, and the repair was done the next morning. No issues since.</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">DT</div>
+        <div>
+          <div class="reviewer-name">David T.</div>
+          <div class="reviewer-detail">Vaughan, ON · Roof Repair</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="google-badge">Google</div>
+      <div class="stars">★★★★★</div>
+      <div class="review-quote">"</div>
+      <p class="review-text">Fair pricing, professional crew, excellent communication throughout the entire project. The retaining wall looks amazing and has completely solved our drainage issue.</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">LM</div>
+        <div>
+          <div class="reviewer-name">Linda M.</div>
+          <div class="reviewer-detail">Aurora, ON · Retaining Wall & Drainage</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" style="padding: var(--section-gap) 5%;">
+  <div class="about-img-wrap fade-up">
+    <div class="about-img-main">
+      <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80" alt="Evergrow team at work">
+    </div>
+    <div class="about-accent"></div>
+    <div class="about-stat-card">
+      <div class="about-stat-num">500+</div>
+      <div class="about-stat-label">Happy Homeowners</div>
+    </div>
+  </div>
+  <div class="about-content fade-up">
+    <div class="section-label">About Evergrow</div>
+    <h2 class="section-title">Built On Trust, Quality & Communication</h2>
+    <p>Evergrow Landscaping & Roofing helps homeowners improve and protect their properties through expert landscaping, roofing, and snow removal services. Known for responsive communication, professional workmanship, and reliable service, the team takes pride in delivering projects that exceed expectations.</p>
+    <p>Every property is treated with care and respect, and every project is personally overseen by owner Godfrey to ensure the highest quality standards are met — every single time.</p>
+    <div class="about-features">
+      <div class="about-feature">Owner-supervised every project</div>
+      <div class="about-feature">500+ completed projects</div>
+      <div class="about-feature">Fully insured & licensed</div>
+      <div class="about-feature">GTA's trusted contractor</div>
+      <div class="about-feature">No hidden fees, ever</div>
+      <div class="about-feature">Serving GTA for 10+ years</div>
+    </div>
+    <a href="#contact" class="btn-primary" style="display:inline-flex;">🌿 Get Your Free Estimate</a>
+  </div>
+</section>
+
+<!-- SERVICE AREA -->
+<section id="area">
+  <div class="area-layout">
+    <div class="fade-up">
+      <div class="section-label">Service Area</div>
+      <h2 class="section-title">Proudly Serving</h2>
+      <p class="section-subtitle">We provide professional landscaping, roofing, and snow removal services across Markham and the Greater Toronto Area.</p>
+      <div class="area-cities">
+        <div class="city-chip"><div class="city-dot"></div>Markham</div>
+        <div class="city-chip"><div class="city-dot"></div>Richmond Hill</div>
+        <div class="city-chip"><div class="city-dot"></div>Vaughan</div>
+        <div class="city-chip"><div class="city-dot"></div>Aurora</div>
+        <div class="city-chip"><div class="city-dot"></div>Stouffville</div>
+        <div class="city-chip"><div class="city-dot"></div>Scarborough</div>
+        <div class="city-chip"><div class="city-dot"></div>North York</div>
+        <div class="city-chip"><div class="city-dot"></div>GTA & Beyond</div>
+      </div>
+    </div>
+    <div class="map-placeholder fade-up">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92385.6268427792!2d-79.42285805!3d43.8561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d51c9cf7be41%3A0xa8c9bce9bf3bbedc!2sMarkham%2C%20ON!5e0!3m2!1sen!2sca!4v1620000000000!5m2!1sen!2sca"
+        allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        title="Evergrow service area map - Markham and GTA">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <div class="fade-up">
+    <h2 class="section-title">Ready To Transform<br>Your Property?</h2>
+    <p class="cta-sub">Get a free estimate for landscaping, roofing, drainage, interlock, or snow removal services. No pressure, no obligation.</p>
+    <div class="cta-buttons">
+      <a href="#contact" class="btn-white">🌿 Get Free Quote</a>
+      <a href="tel:+16471234567" class="btn-outline-white">📞 Call Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-header fade-up">
+    <div class="section-label">Contact Us</div>
+    <h2 class="section-title">Get Your Free Estimate Today</h2>
+  </div>
+  <div class="contact-layout fade-up">
+    <div>
+      <div class="contact-info-item">
+        <div class="contact-icon">📞</div>
+        <div>
+          <div class="contact-info-label">Phone</div>
+          <a href="tel:+16471234567" class="contact-info-value">(647) 123-4567</a>
+        </div>
+      </div>
+      <div class="contact-info-item">
+        <div class="contact-icon">📧</div>
+        <div>
+          <div class="contact-info-label">Email</div>
+          <a href="mailto:info@evergrowlandscaping.ca" class="contact-info-value">info@evergrowlandscaping.ca</a>
+        </div>
+      </div>
+      <div class="contact-info-item">
+        <div class="contact-icon">📍</div>
+        <div>
+          <div class="contact-info-label">Service Area</div>
+          <span class="contact-info-value">Markham & Greater Toronto Area</span>
+        </div>
+      </div>
+      <div class="contact-info-item">
+        <div class="contact-icon">🕐</div>
+        <div>
+          <div class="contact-info-label">Hours</div>
+          <span class="contact-info-value">Mon–Sat: 7am–7pm</span>
+        </div>
+      </div>
+      <br>
+      <p style="font-size:0.85rem;color:rgba(255,255,255,0.35);line-height:1.7;">We typically respond within 24 hours. For urgent roofing or drainage issues, call us directly for same-day assessment.</p>
+    </div>
+    <div>
+      <div class="contact-form">
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" placeholder="John">
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" placeholder="Smith">
+        </div>
+        <div class="form-group full">
+          <label>Email</label>
+          <input type="email" placeholder="john@email.com">
+        </div>
+        <div class="form-group full">
+          <label>Phone</label>
+          <input type="tel" placeholder="(416) 000-0000">
+        </div>
+        <div class="form-group full">
+          <label>Service Needed</label>
+          <select>
+            <option value="">Select a service...</option>
+            <option>Interlock & Patio</option>
+            <option>Driveway Installation</option>
+            <option>Grading & Drainage</option>
+            <option>Retaining Wall</option>
+            <option>Landscaping</option>
+            <option>Roof Repair</option>
+            <option>Snow Removal</option>
+            <option>Other / Multiple Services</option>
+          </select>
+        </div>
+        <div class="form-group full">
+          <label>Tell Us About Your Project</label>
+          <textarea placeholder="Describe your project, property location, timeline, or any questions you have..."></textarea>
+        </div>
+        <div class="form-group full">
+          <button type="button" class="btn-primary" style="width:100%;justify-content:center;" onclick="handleSubmit()">
+            Send Message & Get Free Estimate
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#hero" class="nav-logo" style="margin-bottom:4px;">
+        <div class="logo-mark">🌿</div>
+        <div class="logo-text">
+          Evergrow
+          <span>Landscaping & Roofing</span>
+        </div>
+      </a>
+      <p>Professional landscaping, roofing, and snow removal services for homeowners across Markham and the GTA. Delivered on time, on budget, with exceptional communication.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Interlock & Patios</a></li>
+        <li><a href="#services">Driveways</a></li>
+        <li><a href="#services">Grading & Drainage</a></li>
+        <li><a href="#services">Retaining Walls</a></li>
+        <li><a href="#services">Roof Repairs</a></li>
+        <li><a href="#services">Snow Removal</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#about">About Evergrow</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#gallery">Our Work</a></li>
+        <li><a href="#area">Service Area</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Service Areas</h4>
+      <ul>
+        <li><a href="#area">Markham Landscaping</a></li>
+        <li><a href="#area">Markham Roofing</a></li>
+        <li><a href="#area">Richmond Hill</a></li>
+        <li><a href="#area">Vaughan</a></li>
+        <li><a href="#area">Aurora & Stouffville</a></li>
+        <li><a href="#area">GTA Snow Removal</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Evergrow Landscaping & Roofing. All rights reserved. Serving Markham & the GTA.</p>
+    <p>Interlock Contractors Markham · Patio Installation Markham · Drainage Solutions Markham</p>
+  </div>
+</footer>
+
+<script>
+  // Hamburger menu
+  function toggleMenu() {
+    const menu = document.getElementById('mobileMenu');
+    menu.classList.toggle('active');
+  }
+
+  // Scroll animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, entry.target.dataset.delay || 0);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-up').forEach((el, i) => {
+    observer.observe(el);
+  });
+
+  // Nav scroll effect
+  window.addEventListener('scroll', () => {
+    const nav = document.getElementById('navbar');
+    if (window.scrollY > 80) {
+      nav.style.background = 'rgba(17,20,17,0.98)';
+      nav.style.boxShadow = '0 4px 24px rgba(0,0,0,0.3)';
+    } else {
+      nav.style.background = 'rgba(17,20,17,0.92)';
+      nav.style.boxShadow = 'none';
+    }
+  });
+
+  // Form submit handler
+  function handleSubmit() {
+    const btn = event.target;
+    btn.textContent = '✓ Message Sent! We\'ll be in touch shortly.';
+    btn.style.background = 'var(--green)';
+    btn.disabled = true;
+  }
+</script>
+
+</body>
+</html>
